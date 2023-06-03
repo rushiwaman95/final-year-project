@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, url_for, request,session,Res
 from werkzeug import secure_filename
 from supportFile import *
 import os
-import cv2
+# import cv2
 import pandas as pd
 import utils
 import nltk
@@ -17,7 +17,6 @@ video = ''
 name = ''
 
 r = sr.Recognizer()
-
 app = Flask(__name__)
 
 app.secret_key = '1234'
@@ -263,7 +262,7 @@ def add_header(response):
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', debug=True, threaded=True)
+	app.run(host='localhost', debug=True, threaded=True)
 
 
 #version 2 demo
